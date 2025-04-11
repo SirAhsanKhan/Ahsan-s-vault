@@ -3,7 +3,7 @@ import hashlib
 from cryptography.fernet import Fernet
 
 # 🌟 UI Improvements
-st.set_page_config(page_title="Secure Vault", page_icon="🔐", layout="centered")
+st.set_page_config(page_title="Ahsan's Vault", page_icon="🔐", layout="centered")
 
 # Generate or store a Fernet key once
 if "fernet_key" not in st.session_state:
@@ -22,15 +22,15 @@ def hash_passkey(passkey):
     return hashlib.sha256(passkey.encode()).hexdigest()
 
 #  App Title
-st.markdown("<h1 style='text-align: center; color: #4CAF50;'>Ahsan's Secure Vault</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #4CAF50;'>Ahsan's Vault</h1>", unsafe_allow_html=True)
 
 #  Sidebar Menu
 menu = st.sidebar.radio("📂 Choose Option", ["🏠 Home", "📥 Insert Data", "📤 Retrieve Data", "🗑️ Delete Data"])
 
 # Home Section
 if menu == "🏠 Home":
-    st.markdown("### Welcome to your personal encrypted storage!")
-    st.info("You can safely store, view, and delete your secret text.")
+    st.markdown("### Welcome to Ahsan's vault!")
+    st.info("You can trust me with your data :)")
 
 # Insert Data Section
 elif menu == "📥 Insert Data":
